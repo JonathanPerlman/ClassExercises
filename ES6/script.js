@@ -58,7 +58,7 @@ function printInvertedTriangle(num) {
 
 printInvertedTriangle(5);
 
-//Ex5
+// Ex5
 function printMultiplicationTable(num) {
     for (let i = 1; i <= num; i++) {
         let row = [];
@@ -73,13 +73,24 @@ printMultiplicationTable(5);
 
 
 
-//Ex6
+Ex6
 function printNumberInReverse(num) {
     console.log(num.toString().split('').reverse().join(''));
 }
 printNumberInReverse(12345);
 
-Ex6
+// Ex 7
+function processString(str) {
+    if (str === "") {
+        return "";
+    }
+    if (str.trim() === "") {
+        return " ";
+    }
+    return str.trim();
+}
 
 
-    
+
+
+
