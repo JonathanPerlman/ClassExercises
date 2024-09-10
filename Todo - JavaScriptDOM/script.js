@@ -1,8 +1,9 @@
 // פונקציה ליצירת ID
 // רנדומלי עבור כל משימה
 function generateRandomId() {
-    return Math.random() * 1000000;
+    return parseInt(Math.ceil(Math.random() * Date.now()));
 }
+
 // הפונקציה טוענת כל המשימות ומציגה את זה כשהעמוד עולה
 window.onload = function() {
     const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
@@ -32,7 +33,7 @@ document.getElementById('taskForm').addEventListener('submit', () => {
     taskInput.value = '';
 });
 
-// פונקציה ליצירת שורה בטבלה עבור כל משימה חדשה
+// פונקציה ליצירת שורה בטבלה עבור כל משימה חדשההה
 function createRow(id, task, status) {
     const row = document.createElement('tr');
     // יצירת תאים עבור המזהה, המשימה, והכפתורים
